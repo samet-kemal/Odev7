@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.samet.odev7.ui.fragment.TodoKayitFragment"
+        android:label="AnasayfaFragment" >
+        <action
+            android:id="@+id/action_anasayfaFragment_to_todoKayitFragment"
+            app:destination="@id/todoKayitFragment" />
+        <action
+            android:id="@+id/action_anasayfaFragment_to_todoDetayFragment"
+            app:destination="@id/todoDetayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/todoDetayFragment"
+        android:name="com.samet.odev7.ui.fragment.TodoDetayFragment"
+        android:label="fragment_todo_detay"
+        tools:layout="@layout/fragment_todo_detay" >
+        <argument
+            android:name="todo"
+            app:argType="com.samet.odev7.data.entity.Todos" />
+    </fragment>
+    <fragment
+        android:id="@+id/todoKayitFragment"
+        android:name="com.samet.odev7.ui.fragment.TodoKayitFragment"
+        android:label="fragment_todo_kayit"
+        tools:layout="@layout/fragment_todo_kayit" />
+</navigation>
